@@ -10,15 +10,15 @@
       shell: |
         aws ecr get-login-password --region {{ region }} | docker login --username AWS --password-stdin {{ ecr_uri }}
  
-    - name: Pull latest image
+    - name: Pull image
       shell: docker pull {{ ecr_uri }}:latest
  
     - name: Stop old container
       shell: docker stop frontend || true
  
-    - name: Remove old container
+    - name: Remove container
       shell: docker rm frontend || true
  
-    - name: Run new container
+    - name: Run container
       shell: docker run -d -p 80:80 --name frontend {{ ecr_uri }}:latest
  

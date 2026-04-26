@@ -3,14 +3,14 @@ pipeline {
  
   environment {
     REGION = "eu-north-1"
-    ECR_URI = "123456789012.dkr.ecr.eu-north-1.amazonaws.com/frontend-app"
+    ECR_URI = "606664404429.dkr.ecr.eu-north-1.amazonaws.com/frontend-app"
   }
  
   stages {
  
     stage('Clone Code') {
       steps {
-        git 'https://github.com/<your-username>/<repo>.git'
+        git 'https://github.com/Ayush-pd07/POC-07.git'
       }
     }
  
