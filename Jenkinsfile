@@ -7,7 +7,11 @@ pipeline {
   }
  
   stages {
- 
+    stage('Clone Code') {
+            steps{
+                git branch: 'main',url:'https://github.com/Ayush-pd07/POC-07.git'
+            }
+        }
  
     stage('Build Docker Image') {
       steps {
