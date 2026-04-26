@@ -10,7 +10,7 @@ pipeline {
  
     stage('Clone Code') {
       steps {
-        git 'https://github.com/Ayush-pd07/POC-07.git'
+        git ' git clone https://github.com/Ayush-pd07/POC-07.git'
       }
     }
  
