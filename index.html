@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ElegantSite – Professional Static Website</title>
+
+<style>
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Inter, Arial, sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: #e5e7eb;
+  color: #1f2937;
+}
+
+/* ================= MARQUEE ================= */
+.marquee {
+  background: linear-gradient(90deg, #020617, #0f172a);
+  color: #c7d2fe;
+  padding: 10px 0;
+  font-size: 14px;
+}
+
+/* ================= NAVBAR ================= */
+header {
+  background: linear-gradient(180deg, #020617, #0f172a);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: white;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 28px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #e0e7ff;
+  font-size: 16px;
+}
+
+/* ================= HERO ================= */
+.hero {
+  min-height: 95vh;
+  width: 100%;
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-content {
+  max-width: 900px;
+  text-align: center;
+  padding: 40px;
+  color: white;
+}
+
+.hero h1 {
+  font-size: 54px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+  color: #e0e7ff;
+  margin-bottom: 35px;
+}
+
+.hero button {
+  padding: 14px 40px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: none;
+  background: white;
+  color: #4f46e5;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.hero button:hover { background: #e0e7ff; }
+
+/* ================= SECTIONS ================= */
+.section-bg { background: #f8fafc; }
+.section-dark { background: #eef2ff; }
+
+.section {
+  max-width: 1200px;
+  margin: auto;
+  padding: 90px 24px;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.section p {
+  max-width: 760px;
+  margin: auto;
+  font-size: 17px;
+  color: #475569;
+}
+
+/* ================= SERVICES ================= */
+.service-grid {
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+}
+
+.service-card {
+  background: white;
+  border-radius: 18px;
+  padding: 40px 30px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+  transition: all 0.35s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-12px);
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+}
+
+.service-card:hover h3,
+.service-card:hover p {
+  color: white;
+}
+
+/* SVG ICON */
+.icon {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 20px;
+  fill: #4f46e5;
+}
+
+.service-card:hover .icon { fill: white; }
+
+.service-card h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  color: #64748b;
+}
+
+/* ================= CONTACT ================= */
+.contact-form {
+  max-width: 520px;
+  margin: 40px auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 14px;
+  font-size: 15px;
+  border-radius: 8px;
+  border: 1px solid #c7d2fe;
+}
+
+.contact-form button {
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* ================= FOOTER ================= */
+footer {
+  background: #020617;
+  color: #cbd5f5;
+  text-align: center;
+  padding: 24px;
+}
+</style>
+</head>
+
+<body>
+
+<marquee class="marquee">
+✅ ElegantSite — Fully Offline • Professional Design • No External APIs • Clean UI
+</marquee>
+
+<header>
+  <nav class="navbar">
+    <div class="logo">Elegant Website by-Ayush </div>
+    <ul class="nav-links">
+      <li>#homeHome</a></li>
+      <li>#aboutAbout</a></li>
+      <li>#servicesServices</a></li>
+      <li>#contactContact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero" id="home">
+  <div class="hero-content">
+    <h1>Design That Feels Right!</h1>
+    <p>Professional colors, spacing and structure — built with pure HTML, CSS, and JS.</p>
+    <button onclick="goTo('services')">Explore Services</button>
+  </div>
+</section>
+
+<div class="section-bg">
+  <section class="section" id="about">
+    <h2>About Us</h2>
+    <p>
+      We create elegant, clean, and professional static websites without relying
+      on external APIs or images — reliable, fast, and secure.
+    </p>
+  </section>
+</div>
+
+<div class="section-dark">
+  <section class="section" id="services">
+    <h2>Our Services</h2>
+
+    <div class="service-grid">
+
+      <div class="service-card">
+        <svg class="icon" viewBox="0 0 24 24">
+          <path d="M4 4h16v4H4zM4 10h10v10H4zM16 10h4v10h-4z"/>
+        </svg>
+        <h3>UI Design</h3>
+        <p>Modern typography, spacing, and color systems.</p>
+      </div>
+
+      <div class="service-card">
+        <svg class="icon" viewBox="0 0 24 24">
+          <path d="M12 2l10 6v8l-10 6-10-6V8z"/>
+        </svg>
+        <h3>Frontend</h3>
+        <p>Clean, maintainable HTML, CSS, and JavaScript.</p>
+      </div>
+
+      <div class="service-card">
+        <svg class="icon" viewBox="0 0 24 24">
+          <path d="M3 3h18v18H3zM7 7h10v10H7z"/>
+        </svg>
+        <h3>Static Websites</h3>
+        <p>Fast, lightweight, and offline‑ready builds.</p>
+      </div>
+
+    </div>
+  </section>
+</div>
+
+<div class="section-bg">
+  <section class="section" id="contact">
+    <h2>Contact Us</h2>
+    <p>Let’s build something professional and secure.</p>
+
+    <form class="contact-form" onsubmit="submitForm(event)">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="4" placeholder="Your Message"></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+</div>
+
+<footer>
+© 2026 ElegantSite — No APIs. No Dependencies. Full Control.
+</footer>
+
+<script>
+function goTo(id) {
+  document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+}
+
+function submitForm(e) {
+  e.preventDefault();
+  alert("✅ Message sent successfully!");
+}
+</script>
+
+</body>
+</html>
