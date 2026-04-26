@@ -7,10 +7,6 @@ pipeline {
   }
  
   stages {
-    
-   
-
-
     stage('Build Docker Image') {
       steps {
         sh 'docker build -t frontend-app ./frontend'
@@ -39,14 +35,14 @@ pipeline {
     }
  
     stage('Deploy using Ansible') {
-      steps {
+    steps {
         sh '''
         ansible-playbook ansible/deploy.yml \
         -i ansible/inventory \
-        --extra-vars "ecr_uri=$ECR_URI"
+        --extra-vars "ecr_uri=${ECR_URI}"
         '''
-      }
     }
+}
   }
 }
  

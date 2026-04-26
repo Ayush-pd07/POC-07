@@ -6,19 +6,21 @@
     region: "eu-north-1"
  
   tasks:
+ 
     - name: Login to ECR
       shell: |
-        aws ecr get-login-password --region {{ region }} | docker login --username AWS --password-stdin {{ ecr_uri }}
+        aws ecr get-login-password --region {{ region }} \
+        | docker login --username AWS --password-stdin {{ ecr_uri }}
  
-    - name: Pull image
+    - name: Pull latest image
       shell: docker pull {{ ecr_uri }}:latest
  
     - name: Stop old container
       shell: docker stop frontend || true
  
-    - name: Remove container
+    - name: Remove old container
       shell: docker rm frontend || true
  
-    - name: Run container
+    - name: Run new container
       shell: docker run -d -p 80:80 --name frontend {{ ecr_uri }}:latest
  
