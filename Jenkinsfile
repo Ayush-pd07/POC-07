@@ -3,7 +3,7 @@ pipeline {
  
   environment {
     REGION = "eu-north-1"
-    ECR_URI = "606664404429.dkr.ecr.eu-north-1.amazonaws.com/frontend-app"
+    ECR_URI = "606664404429.dkr.ecr.eu-north-1.amazonaws.com/poc-7-frontend-website"
   }
  
   stages {
